@@ -9,6 +9,7 @@ import {LoansService} from "./providers/loans.service";
 import { LoansComponent } from './loans/loans.component';
 import { IssuesComponent } from './issues/issues.component';
 import { IssueItemComponent } from './issue-item/issue-item.component';
+import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { IssueItemComponent } from './issue-item/issue-item.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [LoansService],
+  providers: [LoansService, ToolsRoomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
