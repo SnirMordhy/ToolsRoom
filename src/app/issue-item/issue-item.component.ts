@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, HostListener} from '@angular/core';
+import {Issue} from "../classes/issue";
 
 @Component({
   selector: 'app-issue-item',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IssueItemComponent implements OnInit {
 
-  constructor() { }
+  @HostListener('click')
+  toggle() {
+    this.isShow = !this.isShow;
+  }
+
+
+  @Input() issue: Issue;
+  isShow: boolean = false;
+
+  constructor() {
+  }
+
 
   ngOnInit() {
   }
