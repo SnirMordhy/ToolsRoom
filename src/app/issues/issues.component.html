@@ -1,4 +1,11 @@
 <p>
   issues works!
 </p>
-<app-issue-item></app-issue-item>
+<div>
+<ul>
+  <li *ngFor="let issue of issues;">
+    <app-issue-item [issue]="issue"></app-issue-item>
+  </li>
+</ul>
+</div>
+
