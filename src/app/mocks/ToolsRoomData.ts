@@ -13,6 +13,6 @@ export const TOOLS_ROOMS: ToolsRoom[] = [
   {id: 7686, name:'חדר כלים בח"א 8'}];
 
 export const ISSUES : Issue[] = [
-  new Issue("firstIssue", new User(1, "Nir"), new Inventory(1, "Baz")),
-  new Issue("secondIssue", new User(2, "Lilach"), new Inventory(2, "Barak"))];
+  new Issue(1, new User(1, "Nir"), new Inventory(1, "Baz")),
+  new Issue(2, new User(2, "Lilach"), new Inventory(2, "Barak"))];
 

@@ -1,11 +1,27 @@
-<p>
-  issues works!
-</p>
-<div>
-<ul>
-  <li *ngFor="let issue of issues;">
-    <app-issue-item [issue]="issue"></app-issue-item>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div id="imaginary_container">
+        <div class="input-group stylish-input-group">
+          <input type="text" class="form-control" placeholder="חפש"
+                 (keyup)="filterIssues(search.value)" #search>
+          <span class="input-group-addon">
+              <button type="submit" (click)="filterIssues(search.value)">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+</div>
+<ul class="list-group">
+  <li *ngFor="let issue of filterIssues(search.value);">
+    <accordion class="clearfix">
+      <app-issue-item [issue]="issue"></app-issue-item>
+    </accordion>
   </li>
 </ul>
-</div>
-

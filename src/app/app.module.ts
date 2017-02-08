@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import{ AccordionModule} from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import {LoansService} from "./providers/loans.service";
@@ -22,7 +23,8 @@ import {IssueService} from "./providers/issue.service";
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AccordionModule.forRoot()
   ],
   providers: [LoansService, IssueService],
   bootstrap: [AppComponent]

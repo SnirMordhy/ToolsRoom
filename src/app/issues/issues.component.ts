@@ -16,4 +16,11 @@ export class IssuesComponent implements OnInit {
     this.issues = this.issueService.getIssues();
   }
 
+  filterIssues(searchValue: string){
+    return this.issues.filter(
+      (value)=>((value.id.toString().indexOf(searchValue)!=-1) ||
+      (value.owner.name.toString().indexOf(searchValue)!=-1))
+    );
+  }
+
 }
