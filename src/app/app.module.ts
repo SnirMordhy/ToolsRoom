@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import {LoansService} from "./providers/loans.service";
 import { LoansComponent } from './loans/loans.component';
 import { IssuesComponent } from './issues/issues.component';
+import { IssueItemComponent } from './issue-item/issue-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
-    IssuesComponent
+    IssuesComponent,
+    IssueItemComponent
   ],
   imports: [
     BrowserModule,
