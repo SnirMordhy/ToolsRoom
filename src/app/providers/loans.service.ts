@@ -5,4 +5,7 @@ export class LoansService {
 
   constructor() { }
 
+  static loanIssuable(issuable: Object, loanee: Object) {
+
+  }
 }
