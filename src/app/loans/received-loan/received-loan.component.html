@@ -1,0 +1,16 @@
+<accordion-group #group>
+  <div accordion-heading>
+    השאלה {{receivedLoan.id}}
+    <span class="pull-left float-xs-left">
+      <i class="glyphicon"
+         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-left': !group?.isOpen}"></i>
+    </span>
+  </div>
+  <ul *ngFor="let tool of  receivedLoan.issueables">
+    <li>{{returnToolName(tool)}}</li>
+  </ul>
+  <span class="pull-left">
+    <button *ngIf="receivedLoan.isReceiveApproved" class="btn btn-warning" (click)="returnLoan(receivedLoan)">סיים השאלה</button>
+    <button *ngIf="!receivedLoan.isReceiveApproved" class="btn btn-primary">אשר השאלה</button>
+  </span>
+</accordion-group>
