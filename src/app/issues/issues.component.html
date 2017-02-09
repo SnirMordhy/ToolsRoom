@@ -19,9 +19,9 @@
 
 </div>
 <ul class="list-group">
-  <li *ngFor="let issue of filterIssues(search.value);">
+  <div *ngFor="let issue of filterIssues(search.value);">
     <accordion class="clearfix">
       <app-issue-item [issue]="issue"></app-issue-item>
     </accordion>
-  </li>
+  </div>
 </ul>

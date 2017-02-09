@@ -1,5 +1,7 @@
 import {Component, OnInit, Input, HostListener} from '@angular/core';
 import {Issue} from "../classes/issue";
+import {Issuable} from "../classes/issueable";
+import {ISSUABLES} from "../mocks/IssuablesData";
 
 @Component({
   selector: 'app-issue-item',
@@ -8,7 +10,8 @@ import {Issue} from "../classes/issue";
 })
 export class IssueItemComponent implements OnInit {
 
-  @HostListener('click')
+  issuables:Issuable[];
+
   toggle() {
     this.isShow = !this.isShow;
   }
@@ -22,6 +25,7 @@ export class IssueItemComponent implements OnInit {
 
 
   ngOnInit() {
+    this.issuables = ISSUABLES.filter(() => Math.random() > 0.5);
   }
 
 }

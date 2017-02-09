@@ -1,9 +1,14 @@
 <accordion-group>
   <div accordion-heading>
-      <div> מספר ניפוק: {{issue.id}} שם חייל: {{issue.owner.name}}
-        <button class="btn btn-primary pull-left float-xs-left">החזר</button>
+    <div class="row">
+      <div class="col-xs-6 text-right" (click)="toggle()">
+        <span>מספר ניפוק: {{issue.id}} שם חייל: {{issue.owner.name}}</span>
       </div>
+      <div class="col-xs-6 text-left">
+        <button class="btn btn-primary">החזר</button>
+      </div>
+    </div>
   </div>
-  עוד פרטים בהמשך
+  <issuable *ngFor="let issuable of issuables" [data]="issuable"></issuable>
 </accordion-group>
 <br>
