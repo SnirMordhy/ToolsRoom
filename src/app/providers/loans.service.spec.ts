@@ -33,7 +33,7 @@ describe('LoansService', () => {
       body: 154,
     })));
     tick();
-    expect(loansService.externalLoans.length).toBe(1);
+    expect(loansService.receivedLoans.length).toBe(1);
   }));
 
   it('should be able to loan one tool to another toolRoom',fakeAsync(()=>{
@@ -43,7 +43,7 @@ describe('LoansService', () => {
       body: 154,
     })));
     tick();
-    expect(loansService.externalLoans.length).toBe(1);
+    expect(loansService.receivedLoans.length).toBe(1);
   }));
 
 });

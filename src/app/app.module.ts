@@ -21,16 +21,15 @@ import {IssueService} from "./providers/issue.service";
 import {IssuablesService} from "./providers/issuables.service";
 import {IssuablesListComponent} from "./issuables-list/issuables-list.component";
 import {IssuableComponent} from "./issuable/issuable.component";
+import {AppRoutingModule} from "./app-routing/app-routing.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
-
     ReturnedLoanComponent,
-    ReceivedLoanComponent
-
+    ReceivedLoanComponent,
     IssuesComponent,
     IssueItemComponent,
     ToolsRoomComponent,
