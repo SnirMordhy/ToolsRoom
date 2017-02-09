@@ -1,0 +1,9 @@
+<ng-select [allowClear]="true"
+             [items]="toolsRoom"
+             [disabled]="disabled"
+             (data)="refreshValue($event)"
+             (selected)="selected($event)"
+             (removed)="removed($event)"
+             (typed)="typed($event)"
+             placeholder="   בחר מחסן לעבודה">
+</ng-select>

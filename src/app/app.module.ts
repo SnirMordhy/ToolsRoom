@@ -9,14 +9,18 @@ import {LoansService} from "./providers/loans.service";
 import { LoansComponent } from './loans/loans.component';
 import { IssuesComponent } from './issues/issues.component';
 import { IssueItemComponent } from './issue-item/issue-item.component';
-import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service'
+import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service';
+import { ToolsRoomComponent } from './components/tools-room/tools-room.component'
+import {SelectModule} from '../../node_modules/ng2-select';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
     IssuesComponent,
-    IssueItemComponent
+    IssueItemComponent,
+    ToolsRoomComponent,
+    SelectModule
   ],
   imports: [
     BrowserModule,
