@@ -12,13 +12,18 @@ import { IssuesComponent } from './issues/issues.component';
 import { IssueItemComponent } from './issue-item/issue-item.component';
 import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service'
 import {IssueService} from "./providers/issue.service";
+import {IssuablesService} from "./providers/issuables.service";
+import {IssuablesListComponent} from "./issuables-list/issuables-list.component";
+import {IssuableComponent} from "./issuable/issuable.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
     IssuesComponent,
-    IssueItemComponent
+    IssueItemComponent,
+    IssuablesListComponent,
+    IssuableComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import {IssueService} from "./providers/issue.service";
     AppRoutingModule,
     AccordionModule.forRoot()
   ],
-  providers: [LoansService,IssueService, ToolsRoomService],
+  providers: [LoansService,IssueService, ToolsRoomService, IssuablesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

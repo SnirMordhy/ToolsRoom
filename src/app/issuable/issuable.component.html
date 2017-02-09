@@ -1,0 +1,9 @@
+<div class="well">
+  <button *ngIf="data.type === 'kit'" (click)="switchToolsVisibility()">{{showTools ? '-' : '+'}}</button>
+  <span>{{data.name}}</span>
+  <ul *ngIf="showTools">
+    <li style="display: block" *ngFor="let tool of data.tools">
+      <issuable [data]="tool"></issuable>
+    </li>
+  </ul>
+</div>
