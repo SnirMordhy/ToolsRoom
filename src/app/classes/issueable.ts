@@ -8,13 +8,15 @@ export class Issuable {
   type:string;
   tools:Issuable[];
   owner:ToolRoom;
+  expirationDate: number;
 
 
-  constructor(id: number, name: string, type: string, tools: Array<Issuable>, owner: ToolRoom) {
+  constructor(id: number, name: string, type: string, tools: Issuable[], owner: ToolRoom, expirationDate: number) {
     this.id = id;
     this.name = name;
     this.type = type;
     this.tools = tools;
     this.owner = owner;
+    this.expirationDate = expirationDate;
   }
 }

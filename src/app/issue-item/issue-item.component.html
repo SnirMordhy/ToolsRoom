@@ -1,3 +1,14 @@
-<p>
-  issue-item works!
-</p>
+<accordion-group>
+  <div accordion-heading>
+    <div class="row">
+      <div class="col-xs-6 text-right" (click)="toggle()">
+        <span>מספר ניפוק: {{issue.id}} שם חייל: {{issue.owner.name}}</span>
+      </div>
+      <div class="col-xs-6 text-left">
+        <button class="btn btn-primary">החזר</button>
+      </div>
+    </div>
+  </div>
+  <issuable *ngFor="let issuable of issuables" [data]="issuable"></issuable>
+</accordion-group>
+<br>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import{ AccordionModule} from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import {LoansService} from "./providers/loans.service";
@@ -12,6 +13,11 @@ import { IssueItemComponent } from './issue-item/issue-item.component';
 import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service';
 import { ToolsRoomComponent } from './components/tools-room/tools-room.component'
 import {SelectModule} from '../../node_modules/ng2-select';
+import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service'
+import {IssueService} from "./providers/issue.service";
+import {IssuablesService} from "./providers/issuables.service";
+import {IssuablesListComponent} from "./issuables-list/issuables-list.component";
+import {IssuableComponent} from "./issuable/issuable.component";
 
 @NgModule({
   declarations: [
@@ -20,15 +26,18 @@ import {SelectModule} from '../../node_modules/ng2-select';
     IssuesComponent,
     IssueItemComponent,
     ToolsRoomComponent,
-    SelectModule
+    SelectModule,
+    IssuablesListComponent,
+    IssuableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AccordionModule.forRoot()
   ],
-  providers: [LoansService, ToolsRoomService],
+  providers: [LoansService,IssueService, ToolsRoomService, IssuablesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
