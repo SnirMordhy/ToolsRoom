@@ -1,3 +1,23 @@
-<p>
-  loans works!
-</p>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4"><h3>השאלות מחדרים אחרים</h3></div>
+  <div class="col-sm-4"><h3>השאלות שהתקבלו בחזרה</h3></div>
+  <div class="col-sm-2"></div>
+</div>
+<div class="row" ngclass="{'text-align':center;}">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4">
+    <accordion *ngFor="let loan of receivedLoans">
+      <app-received-loan [receivedLoan]="loan"></app-received-loan>
+    </accordion>
+  </div>
+  <div class="col-sm-4">
+    <accordion *ngFor="let loan of returnedLoans">
+      <app-returned-loan [returnedLoan]="loan"></app-returned-loan>
+    </accordion>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+
+
+
