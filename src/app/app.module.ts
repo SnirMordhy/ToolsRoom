@@ -10,6 +10,9 @@ import {LoansService} from "./providers/loans.service";
 import { LoansComponent } from './loans/loans.component';
 import { IssuesComponent } from './issues/issues.component';
 import { IssueItemComponent } from './issue-item/issue-item.component';
+import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service';
+import { ToolsRoomComponent } from './components/tools-room/tools-room.component'
+import {SelectModule} from '../../node_modules/ng2-select';
 import { ToolsRoomService } from '../app/providers/toolsRoomService/tools-room.service'
 import {IssueService} from "./providers/issue.service";
 import {IssuablesService} from "./providers/issuables.service";
@@ -22,6 +25,8 @@ import {IssuableComponent} from "./issuable/issuable.component";
     LoansComponent,
     IssuesComponent,
     IssueItemComponent,
+    ToolsRoomComponent,
+    SelectModule,
     IssuablesListComponent,
     IssuableComponent
   ],
