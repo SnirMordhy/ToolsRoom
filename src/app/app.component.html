@@ -3,13 +3,18 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">חדר כלים</a>
+      <a class="navbar-brand" href="#">חדר כלים <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
     </div>
     <ul class="nav navbar-nav">
       <li><a class="nav-item nav-link" routerLink="/issues">ניפוק</a></li>
       <li><a class="nav-item nav-link" routerLink="/issueables">כלים</a></li>
       <li><a class="nav-item nav-link" routerLink="/loans">השאלות</a></li>
     </ul>
+    <ul class="nav navbar-nav pull-left ">
+      <li><app-tools-room></app-tools-room></li>
+    </ul>
   </div>
 </nav>
+<div ngClass="container">
 <router-outlet></router-outlet>
+</div>
